@@ -171,7 +171,7 @@ mean_data4</code></pre>
 <pre><code>## [1] 10766.19</code></pre>
 <p>These numbers are very close to the original dataset but they are slightly different. The median is the value that has increased with the new dataset. ## Are there differences in activity patterns between weekdays and weekends? First I will create a character vector from the known dates in the data set</p>
 <pre class="r"><code>weekday &lt;- tolower(weekdays(data3$date))</code></pre>
-<p>Create a new column that displays the type of day using if elss function</p>
+<p>Create a new column that displays the type of day using if else function</p>
 <pre class="r"><code>data3$type_of_day &lt;- as.factor(ifelse(weekday == &quot;saturday&quot; | weekday == &quot;sunday&quot;, 
                                      &quot;weekend&quot;, &quot;weekday&quot;))</code></pre>
 <p>Aggregate the data using the mean. Be sure to keep the type of day column!</p>

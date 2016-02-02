@@ -100,7 +100,7 @@ First I will create a character vector from the known dates in the data set
 ```{r}
 weekday <- tolower(weekdays(data3$date))
 ```
-Create a new column that displays the type of day using if elss function
+Create a new column that displays the type of day using if else function
 ```{r}
 data3$type_of_day <- as.factor(ifelse(weekday == "saturday" | weekday == "sunday", 
                                      "weekend", "weekday"))
